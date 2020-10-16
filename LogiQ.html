@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <link href="jquery-ui.css" rel="stylesheet"></head>
-     <script src="jquery.js"></script>
-     <script src="jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script> 
+    <link href="jquery-ui.css" rel="stylesheet"></head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+     
      
      <style>
          .source{
@@ -91,6 +93,13 @@ li {
     <ol id="orders"></ol>
 </div>
 
+<b>Eigenschappen:</b>
+<ol id="eigenschappen"></ol>
+ 
+<script>
+$( "#eigenschappen" ).load( "data.html" );
+</script>
+ 
 
 
 </body>
