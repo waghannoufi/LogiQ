@@ -1,0 +1,22 @@
+<? xml version="1.0" encoding="UTF-8"?>
+
+<te>
+<student>
+<roll> 1 </roll>
+<name> ABC</name>
+<marks> 88%</marks>
+</student>
+
+<student>
+<roll> 2 </roll>
+<name> EFG</name>
+<marks> 76%</marks>
+</student>
+
+<student>
+<roll> 3 </roll>
+<name> XYZ</name>
+<marks> 90%</marks>
+</student>
+
+</te>
