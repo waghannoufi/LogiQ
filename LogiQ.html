@@ -8,6 +8,10 @@
      
      
      <style>
+         h2{
+             font-size: large;
+             margin: center;
+         }
          .source{
              height: 130px;
             
@@ -19,7 +23,7 @@
          }
          #canvas
          {
-             width:1800px;
+             width:1500px;
              height:600px;
              border:2px solid black;
              float:left;
@@ -51,6 +55,16 @@ li {
   float: left;
 }
 
+#eigenschappen{
+            width:200px;
+             height:600px;
+             border:2px solid black;
+             float:left;
+             margin-left: 50px;
+             margin-top: 50px;
+             background-color: white;
+             text-align: center;
+         }
         
      </style>
      <script>
@@ -61,6 +75,8 @@ li {
                  $("#orders").append($("<li></li>").s(ui.draggable.text()));
              }});
             });    
+
+            
      </script>
      <script>
         $(document).ready(function(){
@@ -104,8 +120,18 @@ li {
     <h2>Click button to load new content inside DIV box</h2>
 </div>
 
- 
+<<<<<<< HEAD
+=======
 
+<div id="eigenschappen">
+    <h1>test </h1>
+ 
+<script>
+$( "#eigenschappen" ).load( "data.html" );
+</script>
+>>>>>>> 459ae19bafb71dbdee0a5691cc5b577152a655e0
+ 
+</div> 
 
 </body>
 </html>
