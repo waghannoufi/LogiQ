@@ -8,6 +8,10 @@
      
      
      <style>
+         h2{
+             font-size: large;
+             margin: center;
+         }
          .source{
              height: 130px;
             
@@ -19,7 +23,7 @@
          }
          #canvas
          {
-             width:1800px;
+             width:1500px;
              height:600px;
              border:2px solid black;
              float:left;
@@ -51,6 +55,16 @@ li {
   float: left;
 }
 
+#eigenschappen{
+            width:200px;
+             height:600px;
+             border:2px solid black;
+             float:left;
+             margin-left: 50px;
+             margin-top: 50px;
+             background-color: white;
+             text-align: center;
+         }
         
      </style>
      <script>
@@ -61,6 +75,8 @@ li {
                  $("#orders").append($("<li></li>").s(ui.draggable.text()));
              }});
             });    
+
+            
      </script>
 </head>
 
@@ -93,14 +109,15 @@ li {
     <ol id="orders"></ol>
 </div>
 
-<b>Eigenschappen:</b>
-<ol id="eigenschappen"></ol>
+
+<div id="eigenschappen">
+    <h1>test </h1>
  
 <script>
 $( "#eigenschappen" ).load( "data.html" );
 </script>
  
-
+</div> 
 
 </body>
 </html>
