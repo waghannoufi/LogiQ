@@ -62,6 +62,13 @@ li {
              }});
             });    
      </script>
+     <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#box").load("data.html");
+            });
+        });
+        </script>
 </head>
 
 <body>
@@ -71,7 +78,7 @@ li {
     <h3>Ordernummer</h3>
     <ul class="source">
 
-        <li><img src="/images/user.JPG" height= "100"; width="100"></li> 
+    <button><li><img src="/images/user.JPG" id="foto1" height= "100"; width="100"></li></button>
         <li><img src="/images/BU.JPG" height= "100"; width="100"></li>
         <li><img src="/images/network.JPG" height= "100"; width="100"></li>
         <li><img src="/images/DEVICE.JPG" height= "100"; width="100"></li>
@@ -92,13 +99,11 @@ li {
     <h2>Canvas</h2>
     <ol id="orders"></ol>
 </div>
+00
+<div id="box">
+    <h2>Click button to load new content inside DIV box</h2>
+</div>
 
-<b>Eigenschappen:</b>
-<ol id="eigenschappen"></ol>
- 
-<script>
-$( "#eigenschappen" ).load( "data.html" );
-</script>
  
 
 
