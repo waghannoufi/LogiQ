@@ -11,6 +11,16 @@
       <script type="text/javascript" src="libraries/jquery-1.12.4.js.download"></script>
       <script type="text/javascript" src="libraries/jquery-ui.js.download"></script>
 
+
+
+
+
+
+ 
+      
+
+      
+
   <style id="compiled-css" type="text/css">
 
   
@@ -41,6 +51,16 @@
              border: 10px double rgba(219,207,0,0.52);
              border-radius: 40px 40px 40px 40px;
 }
+#eigenschappen{
+            width:200px;
+             height:200px;
+             border:2px solid black;
+             float:left;
+             margin-left: 50px;
+             margin-top: 50px;
+             background-color:transparent;
+             text-align: center;
+         }
 
   </style>
 
@@ -58,38 +78,68 @@
   <h6>buttons</h6>
   <div>
     <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <button id="button1" type="button">Eigenschappen</button>
     <br>
     <br>
     <br>
+    
+    <script>
+      $(document).ready(function(){
+          $("#button1").click(function(){
+              $("#eigenschappen").load("data.html #button1");
+          });
+      });
+      // Load Functie om data in te laden van de "data.html"
+      </script>      
+
     <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <button id="button2" type="button">Eigenschappen</button>
     <br>
     <br>
     <br>
+
+    <script>
+      $(document).ready(function(){
+          $("#button2").click(function(){
+              $("#eigenschappen").load("data.html #button2");
+          });
+      });
+      // Load Functie om data in te laden van de "data.html"
+      </script>      
+
+
     <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <button id="button3" type="button">Eigenschappen</button>
     <br>
     <br>
     <br>
+
+    <script>
+      $(document).ready(function(){
+          $("#button3").click(function(){
+              $("#eigenschappen").load("data.html #button3");
+          });
+      });
+      // Load Functie om data in te laden van de "data.html"
+      </script>      
+
+
     <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <button id="button4" type="button">Eigenschappen</button>
     <br>
     <br>
     <br>
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <br>
-    <br>
-    <br>
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <br>
-    <br>
-    <br>
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <br>
-    <br>
-    <br>
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <br>
-    <br>
-    <br>
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+
+    <script>
+      $(document).ready(function(){
+          $("#button4").click(function(){
+              $("#eigenschappen").load("data.html #button4");
+          });
+      });
+      // Load Functie om data in te laden van de "data.html"
+      </script>      
+
+
 
   </div>
 </div>
@@ -145,6 +195,14 @@
 
 </script>
 
+
+
+<div id="eigenschappen">
+
+
+</div> 
+
+   
 
 
 
