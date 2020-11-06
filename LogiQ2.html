@@ -1,28 +1,21 @@
 <!DOCTYPE html>
+
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <title></title>
-  
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <script type="text/javascript" src="extra/dummy.js.download"></script>
-    <link rel="stylesheet" type="text/css" href="extra/normalize.css">
-
-    <link rel="stylesheet" type="text/css" href="extra/result-light.css">
-
-      <link rel="stylesheet" type="text/css" href="extra/demo.css">
-      <script type="text/javascript" src="extra/bootstrap.min.js.download"></script>
-      <link rel="stylesheet" type="text/css" href="./jquery-ui.theme.css">
-      <script type="text/javascript" src="extra/jquery-ui.cs"></script>
-      <script type="text/javascript" src="extra/jquery-1.12.4.js.download"></script>
-      <script type="text/javascript" src="extra/jquery-ui.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="libraries/normalize.css">
+    <link rel="stylesheet" type="text/css" href="libraries/result-light.css">
+      <link rel="stylesheet" type="text/css" href="libraries/demo.css">
+      <script type="text/javascript" src="libraries/bootstrap.min.js.download"></script>
+      <link rel="stylesheet" type="text/css" href="libraries/jquery-ui.theme.css">
+      
+      <script type="text/javascript" src="libraries/jquery-1.12.4.js.download"></script>
+      <script type="text/javascript" src="libraries/jquery-ui.js.download"></script>
 
   <style id="compiled-css" type="text/css">
-      .tool-1,
-.tool-2 {
+
+  
+    
+.tool{
   width: 60px;
   height: 1.5em;
   border: 1px red solid;
@@ -30,18 +23,25 @@
   text-align: center;
   padding: 0.5em;
 }
-.tool-2{
-   border: 1px green solid;
 
- 
-}
 .ui-resizable-se {
   right: -5px;
   bottom: -5px;
   position: relative;
 }
 
-    /* EOS */
+.ui-droppable{
+  width:1500px;
+             height:600px;
+            
+             float:left;
+             margin-top: 50px;
+             background-color: transparent;
+             text-align: center;
+             border: 10px double rgba(219,207,0,0.52);
+             border-radius: 40px 40px 40px 40px;
+}
+
   </style>
 
   <script id="insert"></script>
@@ -49,30 +49,61 @@
 
 </head>
 <body>
-    <div style="width:20%;float:left;border:1px solid; height:400px">
+
+
+
+    <div class="canvas1" style="width:20%;float:left;border:1px solid; height:400px">
 
 
   <h6>buttons</h6>
   <div>
-    <div class="tool tool-1   ui-draggable ui-draggable-handle" contenteditable="true">gaffie<img src="images/theehuis-africana.jpg" height=100px width=100px></div>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
     <br>
-    <div class="tool tool-2   ui-draggable ui-draggable-handle" contenteditable="true">click</div>
-    <hr>
-    
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
+    <br>
+    <br>
+    <br>
+    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
 
   </div>
 </div>
 
-<div style="width:78%;height:400px;float:right;border:1px solid;" class="canvas ui-droppable">
+<div class="canvas ui-droppable">
   <p>
     canvas
   </p>
 
 </div>
-note:i want to drag these button multiple time and once it dopped inside canvas it can be draggable inside canvas and resizable
 
 
-    <script type="text/javascript">//<![CDATA[
+
+    <script type="text/javascript">
 
 
   $(init);
@@ -81,17 +112,19 @@ note:i want to drag these button multiple time and once it dopped inside canvas 
     var diagram = [];
     var canvas = $(".canvas");
 
+    //variabele aanmaken
 
 
 
     $(".tool").draggable({
       helper: "clone",
-      //cursor: "move",
+      //.Tool draggable maken en clonen
       cancel: false,
     });
     canvas.droppable({
       drop: function(event, ui) {
-      	console.log(ui.helper.prop("outerHTML"))
+        console.log(ui.helper.prop("outerHTML"))
+        //canvas droppable maken
 				
         var new_signature = ui.helper.is('.ui-resizable') ?
         	ui.helper
@@ -101,6 +134,7 @@ note:i want to drag these button multiple time and once it dopped inside canvas 
         new_signature.draggable({
           helper: false
         }).resizable()
+        //Functie om de draggable ".Tools" resizable te maken
 
       }
     });
@@ -109,20 +143,8 @@ note:i want to drag these button multiple time and once it dopped inside canvas 
 
 
 
-  //]]></script>
+</script>
 
-  <script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent){
-      window.parent.parent.postMessage(["resultsFrame", {
-        height: document.body.getBoundingClientRect().height,
-        slug: "wngwsxw2"
-      }], "*")
-    }
-
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-  </script>
 
 
 

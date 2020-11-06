@@ -2,9 +2,9 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script> 
-    <link href="jquery-ui.css" rel="stylesheet"></head>
-    <script src="jquery.js"></script>
-    <script src="jquery-ui.js"></script>
+    <link href="libraries/jquery-ui.css" rel="stylesheet"></head>
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/jquery-ui.js"></script>
      
      
      <style>
@@ -34,11 +34,11 @@
          
          .li1{
              font-size: 100px;
-             background-image: url(/images/ui-icons_cc0000_256x240.png);
+             background-image: url(images/ui-icons_cc0000_256x240.png);
          }
 
          body {
-  background-image: url("/images/warehouse.jpg");
+  background-image: url("images/warehouse.jpg");
   background-position: 100%;
 
 }
@@ -67,12 +67,15 @@ li {
          }
         
      </style>
-     <script>
+     <script> 
          $(document).ready(function(){
              $("#myAccordion").accordion();
+             //Accordion functie om een accordion toe te voegen
              $(".source li").draggable({helper:"clone"});
+             //Functie om "source li" draggable maken een clonen
              $("#canvas").droppable({drop:function(event,ui){
                  $("#orders").append($("<li></li>").s(ui.draggable.text()));
+                 //Functie om "source li" droppable te maken in #canvas
              }});
             });    
 
@@ -81,9 +84,10 @@ li {
      <script>
         $(document).ready(function(){
             $("button").click(function(){
-                $("#box").load("data.html");
+                $("#eigenschappen").load("data.html");
             });
         });
+        // Load Functie om data in te laden van de "data.html"
         </script>
 </head>
 
@@ -94,18 +98,18 @@ li {
     <h3>Ordernummer</h3>
     <ul class="source">
 
-    <button><li><img src="/images/user.JPG" id="foto1" height= "100"; width="100"></li></button>
-        <li><img src="/images/BU.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/network.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/DEVICE.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/emailin.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/emailout.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/global.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/mang.jpg" height= "100"; width="100"></li>
-        <li><img src="/images/banking.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/call1.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/cs.JPG" height= "100"; width="100"></li>
-        <li><img src="/images/proces.png" height= "100"; width="100"></li>
+    <button><li><img src="images/user.JPG" id="foto1" height= "100"; width="100"></li></button>
+        <li><img src="images/BU.JPG" height= "100"; width="100"></li>
+        <li><img src="images/network.JPG" height= "100"; width="100"></li>
+        <li><img src="images/DEVICE.JPG" height= "100"; width="100"></li>
+        <li><img src="images/emailin.JPG" height= "100"; width="100"></li>
+        <li><img src="images/emailout.JPG" height= "100"; width="100"></li>
+        <li><img src="images/global.JPG" height= "100"; width="100"></li>
+        <li><img src="images/mang.jpg" height= "100"; width="100"></li>
+        <li><img src="images/banking.JPG" height= "100"; width="100"></li>
+        <li><img src="images/call1.JPG" height= "100"; width="100"></li>
+        <li><img src="images/cs.JPG" height= "100"; width="100"></li>
+        <li><img src="images/proces.png" height= "100"; width="100"></li>
     </ul>
     
 </div>
@@ -115,22 +119,15 @@ li {
     <h2>Canvas</h2>
     <ol id="orders"></ol>
 </div>
-00
-<div id="box">
-    <h2>Click button to load new content inside DIV box</h2>
-</div>
 
-<<<<<<< HEAD
-=======
+<div id="box">
+    <h2>eigenschappen</h2>
+</div>
 
 <div id="eigenschappen">
     <h1>test </h1>
  
-<script>
-$( "#eigenschappen" ).load( "data.html" );
-</script>
->>>>>>> 459ae19bafb71dbdee0a5691cc5b577152a655e0
- 
+
 </div> 
 
 </body>
