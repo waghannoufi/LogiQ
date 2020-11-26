@@ -22,17 +22,68 @@
       
 
   <style id="compiled-css" type="text/css">
+.canvas1en2{
+overflow-y: scroll;
+border: 17px outset #1C6EA4;
+border-radius: 0px 40px 0px 40px;
 
-  
-    
-.tool{
+
+}
+
+.controlboard{
+  overflow-y: scroll;
+  border: 5px outset #1C6EA4;
+border-radius: 0px 40px 0px 40px;
+height: 350px;
+width: 150px;
+
+}
+.tool-1,
+.tool-2 {
   width: 60px;
   height: 1.5em;
-  border: 1px red solid;
+  border: 5px red solid;
   border-radius: .2em;
   text-align: center;
   padding: 0.5em;
+  border-radius: 40px 40px 40px 40px;
+  margin-left: 10px;
+  
 }
+
+.tool-3 {
+  width: 60px;
+  height: 1.5em;
+  border: 5px solid yellow;
+  border-radius: .2em;
+  text-align: center;
+  padding: 0.5em;
+  margin-left: 10px;
+}
+.tool-4 {
+  width: 60px;
+  height: 1.5em;
+  border: 1px solid blue;
+  border-radius: .2em;
+  text-align: center;
+  padding: 0.5em;
+  margin-left: 10px;
+}
+.tool-5 {
+  width: 60px;
+  height: 1.5em;
+  border: 1px solid purple;
+  border-radius: .2em;
+  text-align: center;
+  padding: 0.5em;
+  margin-left: 10px;
+  
+
+
+}
+    
+    
+
 
 .ui-resizable-se {
   right: -5px;
@@ -41,25 +92,18 @@
 }
 
 .ui-droppable{
-  width:1500px;
-             height:600px;
-            
-             float:left;
-             margin-top: 50px;
-             background-color: transparent;
-             text-align: center;
-             border: 10px double rgba(219,207,0,0.52);
-             border-radius: 40px 40px 40px 40px;
+  border: 17px outset #1C6EA4;
+border-radius: 0px 40px 0px 40px;
+height: 600px;
+width: 1300px;
+margin-left: 500px;
 }
 #eigenschappen{
-            width:200px;
-             height:200px;
-             border:2px solid black;
-             float:left;
-             margin-left: 50px;
-             margin-top: 50px;
-             background-color:transparent;
-             text-align: center;
+  overflow-y: scroll;
+  border: 5px outset #1C6EA4;
+border-radius: 0px 40px 0px 40px;
+height: 350px;
+width: 150px;
          }
 
   </style>
@@ -71,127 +115,115 @@
 <body>
 
 
+<div >
+                                                          
 
-    <div class="canvas1" style="width:20%;float:left;border:1px solid; height:400px">
+
+       <div class="controlboard">
+       <div class="tool tool-1"    contenteditable="true">EDIT</div>
+       <button id="button1" type="button">Eigenschappen</button>
+       <br>
+       <br>
+       <br>                                                   
+       <script>
+       $(document).ready(function(){
+       $("#button1").click(function(){
+       $("#eigenschappen").load("data.html #button1");
+       });
+       });
+       // Load Functie om data in te laden van de "data.html"
+       </script>      
 
 
-  <h6>buttons</h6>
-  <div>
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <button id="button1" type="button">Eigenschappen</button>
-    <br>
-    <br>
-    <br>
-    
-    <script>
+      <div class="tool tool-3   " contenteditable="true">EDIT</div>
+      <button id="button2" type="button">Eigenschappen</button>
+      <br>
+      <br>
+      <br>
+      <script>
       $(document).ready(function(){
-          $("#button1").click(function(){
-              $("#eigenschappen").load("data.html #button1");
-          });
+      $("#button2").click(function(){
+      $("#eigenschappen").load("data.html #button2");
       });
-      // Load Functie om data in te laden van de "data.html"
-      </script>      
-
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <button id="button2" type="button">Eigenschappen</button>
-    <br>
-    <br>
-    <br>
-
-    <script>
-      $(document).ready(function(){
-          $("#button2").click(function(){
-              $("#eigenschappen").load("data.html #button2");
-          });
-      });
-      // Load Functie om data in te laden van de "data.html"
-      </script>      
-
-
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <button id="button3" type="button">Eigenschappen</button>
-    <br>
-    <br>
-    <br>
-
-    <script>
-      $(document).ready(function(){
-          $("#button3").click(function(){
-              $("#eigenschappen").load("data.html #button3");
-          });
       });
       // Load Functie om data in te laden van de "data.html"
       </script>      
 
 
-    <div class="tool   ui-draggable ui-draggable-handle" contenteditable="true">EDIT</div>
-    <button id="button4" type="button">Eigenschappen</button>
-    <br>
-    <br>
-    <br>
-
-    <script>
+      <div class="tool tool-4" contenteditable="true">EDIT</div>
+      <button id="button3" type="button">Eigenschappen</button>
+      <br>
+      <br>
+      <br>
+      <script>
       $(document).ready(function(){
-          $("#button4").click(function(){
-              $("#eigenschappen").load("data.html #button4");
-          });
+      $("#button3").click(function(){
+      $("#eigenschappen").load("data.html #button3");
+      });
       });
       // Load Functie om data in te laden van de "data.html"
       </script>      
 
 
-
-  </div>
+      <div class="tool   tool-5"  contenteditable="true">EDIT</div>
+      <button id="button4" type="button">Eigenschappen</button>
+      <br>
+      <br>
+      <br>
+      <script>
+      $(document).ready(function(){
+      $("#button4").click(function(){
+      $("#eigenschappen").load("data.html #button4");
+      });
+      });
+      // Load Functie om data in te laden van de "data.html"
+      </script>                                                       
+                                                        
 </div>
-
+                                                          
+                                              
+                                                      
+                                                       
 <div class="canvas ui-droppable">
-  <p>
-    canvas
-  </p>
-
+          
 </div>
 
+        
+
+ <script type="text/javascript">
 
 
-    <script type="text/javascript">
-
-
-  $(init);
-
-  function init() {
-    var diagram = [];
-    var canvas = $(".canvas");
-
-    //variabele aanmaken
+        $(init);
+        function init() {
+        var diagram = [];
+        var canvas = $(".canvas");
+        //variabele aanmaken
 
 
 
-    $(".tool").draggable({
-      helper: "clone",
-      //.Tool draggable maken en clonen
-      cancel: false,
-    });
-    canvas.droppable({
-      drop: function(event, ui) {
+        $(".tool").draggable({
+        helper: "clone",
+        //.Tool draggable maken en clonen
+        cancel: false,
+        });
+        canvas.droppable({
+        drop: function(event, ui) {
         console.log(ui.helper.prop("outerHTML"))
         //canvas droppable maken
 				
         var new_signature = ui.helper.is('.ui-resizable') ?
-        	ui.helper
+        ui.helper
           :
-        	$(ui.helper).clone().removeClass('tool ui-draggable ui-draggable-handle ui-draggable-dragging');
+      	$(ui.helper).clone().removeClass('tool ui-draggable ui-draggable-handle ui-draggable-dragging');
         $(this).append(new_signature);
         new_signature.draggable({
-          helper: false
+        helper: false
         }).resizable()
         //Functie om de draggable ".Tools" resizable te maken
 
-      }
-    });
-
-  }
-
-
+ }
+ });
+ }
 
 </script>
 
@@ -199,12 +231,6 @@
 
 <div id="eigenschappen">
 
-
 </div> 
-
-   
-
-
-
 
 </body></html>
