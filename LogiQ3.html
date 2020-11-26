@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="libraries/flowy.min.css" rel="stylesheet" />
+    <script src="libraries/flowy.min.js"></script>
+    <link href='styles.css' rel='stylesheet' type='text/css'>  
+ 
+
+</head>
+<body>
+
+ <!-- Canvas -->
+  <div id="canvas"></div>
+  </div>
+
+ <!-- Navigatie balk -->
+
+<div id="navigation">
+    <div class="topnav">
+    <a class="active" id="removeblock">Reset Field</a>
+    </div>
+</div>
+
+ <!-- Script om de canvas field te legen, de ge-edit controls blijven hetzelfde totdat de pagina refresht -->
+<script>document.getElementById("removeblock").addEventListener("click", function(){
+  flowy.deleteBlocks();
+ });</script>
+
+
+<div id="leftcard">
+      <div id="closecard">
+      
+      </div>
+
+<p id="header">Blocks</p>
+
+      <div id="subnav">
+      <div id="triggers" class="navactive side">Triggers</div>
+      <div id="actions" class="navdisabled side">Actions</div>
+      <div id="loggers" class="navdisabled side">Loggers</div>
+      </div>
+
+<div id="blocklist">
+          <div class="blockelem create-flowy noselect">
+          <input type="hidden" name='blockelemtype' class="blockelemtype" value="1">
+          <div class="grabme">
+          <img src="assets/grabme.svg">
+          </div>
+          <div class="blockin">
+          <div class="blockico">
+          <span></span>
+          <img src="assets/eye.svg">
+          </div>
+          <div class="blocktext">
+          <p class="blocktitle" contenteditable="true">New visitor </p>
+          <p class="blockdesc" contenteditable="true">Triggers when somebody visits a specified page</p>
+          <button id="button" type="button">Eigenschappen</button>
+          </div>
+          </div>
+ </div>
+
+          <div class="blockelem create-flowy noselect">
+          <input type="hidden" name='blockelemtype' class="blockelemtype" value="2">
+          <div class="grabme">
+          <img src="assets/grabme.svg">
+          </div>
+          <div class="blockin">
+          <div class="blockico">
+          <span></span>
+          <img src="assets/action.svg">
+          </div>
+          <div class="blocktext">
+          <p class="blocktitle" contenteditable="true">Action is performed</p>
+          <p class="blockdesc" contenteditable="true">Triggers when somebody performs a specified action</p>
+          <button id="button" type="button">Eigenschappen</button>
+          </div>
+          </div>
+</div>
+
+          <div class="blockelem create-flowy noselect">
+          <input type="hidden" name='blockelemtype' class="blockelemtype" value="3">
+          <div class="grabme">
+          <img src="assets/grabme.svg">
+          </div>
+          <div class="blockin">
+          <div class="blockico">
+          <span></span>
+          <img src="assets/time.svg">
+          </div>
+          <div class="blocktext">
+          <p class="blocktitle" contenteditable="true">Time has passed</p>
+          <p class="blockdesc" contenteditable="true">Triggers after a specified amount of time</p>
+          <button id="button" type="button">Eigenschappen</button>
+          </div>
+          </div>
+</div>
+
+          <div class="blockelem create-flowy noselect">
+          <input type="hidden" name='blockelemtype' class="blockelemtype" value="4">
+          <div class="grabme">
+          <img src="assets/grabme.svg">
+          </div>
+          <div class="blockin">
+          <div class="blockico">
+          <span></span>
+          <img src="assets/error.svg">
+          </div>
+          <div class="blocktext">
+          <p class="blocktitle" contenteditable="true">Error prompt</p>
+          <p class="blockdesc" contenteditable="true">Triggers when a specified error happens</p>
+          <button id="button" type="button">Eigenschappen</button>
+          </div>
+          </div>
+          </div>
+  </div>
+  
+ <!-- Script voor de canvas omgeving -->
+   <script>flowy(document.getElementById("canvas"));</script>
+
+</body>
+</html>
