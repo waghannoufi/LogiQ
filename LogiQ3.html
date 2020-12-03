@@ -21,10 +21,17 @@
    
     </div>
 </div>
+<br>
+<br>
+<div id="saveblock">Save</div>
 
  <!-- Script om de canvas field te legen, de ge-edit controls blijven hetzelfde totdat de pagina refresht -->
 <script>document.getElementById("removeblock").addEventListener("click", function(){
   flowy.deleteBlocks();
+ });</script>
+
+<script>document.getElementById("saveblock").addEventListener("click", function(){
+  JSON.stringify(flowy.output())
  });</script>
 
 
@@ -111,7 +118,28 @@
   </div>
   
  <!-- Script voor de canvas omgeving -->
-   <script>flowy(document.getElementById("canvas"));</script>
+   <script>
+    
+// Initialize Flowy
+flowy(document.getElementById("canvas"), onGrab, onRelease, onSnap, onRearrange);
+
+function onGrab(block){
+  // When the user grabs a block
+  
+}
+function onRelease(){
+  // When the user releases a block
+  return true
+}
+function onSnap(block, first, parent){
+  // When a block snaps with another one
+  return true
+}
+function onRearrange(block, parent){
+  // When a block is rearranged
+  return false
+}
+  </script>
 
 </body>
 </html>
