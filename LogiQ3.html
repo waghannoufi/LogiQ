@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <link href="libraries/flowy.min.css" rel="stylesheet" />
-    <script src="libraries/flowy.min.js"></script>
+    <script src="libraries/flowy.js"></script>
     <link href='styles.css' rel='stylesheet' type='text/css'>  
  
 
@@ -21,17 +21,10 @@
    
     </div>
 </div>
-<br>
-<br>
-<div id="saveblock">Save</div>
 
  <!-- Script om de canvas field te legen, de ge-edit controls blijven hetzelfde totdat de pagina refresht -->
 <script>document.getElementById("removeblock").addEventListener("click", function(){
   flowy.deleteBlocks();
- });</script>
-
-<script>document.getElementById("saveblock").addEventListener("click", function(){
-  JSON.stringify(flowy.output())
  });</script>
 
 
@@ -125,7 +118,7 @@ flowy(document.getElementById("canvas"), onGrab, onRelease, onSnap, onRearrange)
 
 function onGrab(block){
   // When the user grabs a block
-  
+  return true
 }
 function onRelease(){
   // When the user releases a block
