@@ -37,4 +37,9 @@ $(document).ready(function(){
                 });
                 // Load Functie om data in te laden van de "data.html voor button 4"
 
-        
+
+         $(document).ready(function(){
+                    $("#reset").click(function(){
+                      $("#canvas").empty();
+                    });
+                  });        
