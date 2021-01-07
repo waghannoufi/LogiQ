@@ -9,12 +9,6 @@ $(function () {
     });
 });
 
-$(document).ready(function(){
-    $("#button1").click(function(){
-    $("#eigenschappen").load("data.html #button1");
-    });
-    });
-    // Load Functie om data in te laden van de "data.html voor button 1"
 
     $(document).ready(function(){
         $("#button2").click(function(){
@@ -42,4 +36,20 @@ $(document).ready(function(){
                     $("#reset").click(function(){
                       $("#canvas").empty();
                     });
-                  });        
+                  });    
+ 
+                  
+                  function EigenschappenFunc() {
+                    var person = prompt("Please enter your name", person);
+                    localStorage.setItem("Eigenschap", person);
+                    }
+
+                    function EigenschappenInladen() {
+                        var x = localStorage.getItem("Eigenschap");
+                        document.getElementById("eigenschappen").innerHTML = x;
+                      }
+                   
+
+                       
+                  
+                  

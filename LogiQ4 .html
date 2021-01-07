@@ -100,26 +100,15 @@
 
 <body>
 
-    <script>
-        $(function () {
-            $("#canvas .items").sortable({
-                    connectWith: "ul"  
-            });
-             
-            $("ul[id^='control']").draggable({
-                helper: "clone",
-                connectToSortable: ".items"
-            });
-        });
-    </script>
 
 
 <div class=controlboard>
     <ul id="control1" class="items">
         <ul id="control1" class="items">
             <li class="">
-                <p class="list availablelist" contenteditable="true">Control 1 
-                    <button id="button1" type="button">Eigenschappen</button>
+                <p class="list availablelist" contenteditable="true">Label 
+                    <button onclick="EigenschappenFunc()">Wijzigen Control</button>
+                    <button onclick="EigenschappenInladen()">Eigenschappen</button>
                 </p>
           
               
