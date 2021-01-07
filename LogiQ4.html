@@ -5,7 +5,7 @@
     <link href="libraries/jquery-ui.css" rel="stylesheet"></head>
     <script src="libraries/jquery.js"></script>
     <script src="libraries/jquery-ui.js"></script>
-    <script src="LogiQ.JS"></script>
+    <script src="LogiQ.js"></script>
 
 
     <style type="text/css">
@@ -77,18 +77,6 @@
 
 <body>
 
-    <script>
-        $(function () {
-            $("#canvas .items").sortable({
-                    connectWith: "ul"  
-            });
-             
-            $("ul[id^='control']").draggable({
-                helper: "clone",
-                connectToSortable: ".items"
-            });
-        });
-    </script>
 
 
 <div class=controlboard>
@@ -104,14 +92,7 @@
         
         </ul>
 
-        <script>
-            $(document).ready(function(){
-            $("#button1").click(function(){
-            $("#eigenschappen").load("data.html #button1");
-            });
-            });
-            // Load Functie om data in te laden van de "data.html voor button 1"
-            </script>   
+         
 
     
 
@@ -129,14 +110,7 @@
                 </ul>
 
 
-                <script>
-                    $(document).ready(function(){
-                    $("#button2").click(function(){
-                    $("#eigenschappen").load("data.html #button2");
-                    });
-                    });
-                    // Load Functie om data in te laden van de "data.html voor button 2"
-                    </script>      
+                  
 
 
                 <ul id="control1" class="items">
@@ -151,14 +125,7 @@
                     
                     </ul>
 
-                    <script>
-                        $(document).ready(function(){
-                        $("#button3").click(function(){
-                        $("#eigenschappen").load("data.html #button3");
-                        });
-                        });
-                        // Load Functie om data in te laden van de "data.html voor button 3"
-                        </script>
+                  
 
 
                     <ul id="control1" class="items">
@@ -172,15 +139,7 @@
                             </li>
                         
                         </ul>
-
-                        <script>
-                            $(document).ready(function(){
-                            $("#button4").click(function(){
-                            $("#eigenschappen").load("data.html #button4");
-                            });
-                            });
-                            // Load Functie om data in te laden van de "data.html voor button 4"
-                            </script>     
+ 
 
         </div>       
     
