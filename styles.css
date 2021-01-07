@@ -670,7 +670,7 @@ body, html {
     }
     
     
-    #canvas {
+    /*#canvas {
         position: absolute;
         width: calc(100% - 361px);
         height: calc(100% - 71px);
@@ -678,7 +678,7 @@ body, html {
         left: 361px;
         z-index: 0;
         overflow: auto;
-    }
+    }*/
     #propwrap {
         position: absolute;
         right: 0;

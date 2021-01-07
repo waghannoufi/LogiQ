@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script> 
+    <link href="libraries/jquery-ui.css" rel="stylesheet"></head>
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/jquery-ui.js"></script>
+
+
+    <style type="text/css">
+        .bar {
+            width: 100px;
+            height: 20px;
+            margin: 2px;
+            border: 1px solid black;
+            background-color: lightgreen;
+            text-align: center;
+            float: left;
+            margin: 2px;
+            padding: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+         
+        .list {
+            background-color: lightblue;
+            border: 1px solid gray;
+        }
+         
+        .items .ui-selected {
+            background: red;
+            color: white;
+            font-weight: bold;
+        }
+         
+        .items {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 150px;
+        }
+         
+        .items li {
+            margin: 2px;
+            padding: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+         
+        .weekday {
+            float: left;
+        }
+         
+        #canvas
+         {
+             width:10px;
+             height:200px;
+             border:2px solid black;
+             float:left;
+             margin-top: 50px;
+             background-color: white;
+             text-align: center;
+         }
+         .controlboard
+         {
+            overflow: auto;
+            border:2px solid black;
+         }
+
+
+        
+        </style>
+     
+</head>
+
+
+<body>
+
+    <script>
+        $(function () {
+            $("#canvas .items").sortable({
+                    connectWith: "ul"  
+            });
+             
+            $("ul[id^='control']").draggable({
+                helper: "clone",
+                connectToSortable: ".items"
+            });
+        });
+    </script>
+<div class=controlboard>
+    <ul id="control1" class="items">
+        <ul id="control1" class="items">
+            <li class="">
+                <p class="list availablelist" contenteditable="true">Control 1 
+                    <button id="button" type="button">Eigenschappen</button>
+                </p>
+          
+              
+            </li>
+        
+        </ul>
+
+    
+        
+            <ul id="control1" class="items">
+                <ul id="control1" class="items">
+                    <li class="">
+                        <p class="list availablelist" contenteditable="true">Control 1 
+                            <button id="button" type="button">Eigenschappen</button>
+                        </p>
+                  
+                      
+                    </li>
+                
+                </ul>
+                <ul id="control1" class="items">
+                    <ul id="control1" class="items">
+                        <li class="">
+                            <p class="list availablelist" contenteditable="true">Control 1 
+                                <button id="button" type="button">Eigenschappen</button>
+                            </p>
+                      
+                          
+                        </li>
+                    
+                    </ul>
+                    <ul id="control1" class="items">
+                        <ul id="control1" class="items">
+                            <li class="">
+                                <p class="list availablelist" contenteditable="true">Control 1 
+                                    <button id="button" type="button">Eigenschappen</button>
+                                </p>
+                          
+                              
+                            </li>
+                        
+                        </ul>
+
+
+            <ul id="control3" class="items">    
+                <li class="list availablelist">Control 3</li>
+            </ul>
+
+
+            <ul id="control4" class="items">    
+                <li class="list availablelist">Control 4</li>
+            </ul>
+
+
+            <ul id="control5" class="items">    
+                <li class="list availablelist">Control 5</li>
+            </ul>
+
+        </div>       
+    
+    </div>
+
+    <div style="clear:both"></div>
+    <div>Canvas</div>
+    <div id="canvas" style="float:left;width:700px;">
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+
+ 
+
+  
+    </div>
+
+
+</body>
+</html>
