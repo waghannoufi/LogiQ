@@ -5,7 +5,7 @@
     <link href="libraries/jquery-ui.css" rel="stylesheet"></head>
     <script src="libraries/jquery.js"></script>
     <script src="libraries/jquery-ui.js"></script>
-    <script src="LogiQ.js"></script>
+    <script src="LogiQ.JS"></script>
 
 
     <style type="text/css">
@@ -62,21 +62,56 @@
             background-image:url(images/grid.jpg);
              text-align: center;
              overflow: scroll;
+             border: 7px outset #1C6EA4;
+
+             border-radius: 0px 0px 40px 0px;
          }
          .controlboard
          {
             overflow: auto;
             border:2px solid black;
          }
- 
-        
+         .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
         </style>
      
 </head>
-
+<div class="topnav">
+    <button id="reset">Reset</button>
+  </div>
 
 <body>
 
+    <script>
+        $(function () {
+            $("#canvas .items").sortable({
+                    connectWith: "ul"  
+            });
+             
+            $("ul[id^='control']").draggable({
+                helper: "clone",
+                connectToSortable: ".items"
+            });
+        });
+    </script>
 
 
 <div class=controlboard>
@@ -92,7 +127,14 @@
         
         </ul>
 
-         
+        <script>
+            $(document).ready(function(){
+            $("#button1").click(function(){
+            $("#eigenschappen").load("data.html #button1");
+            });
+            });
+            // Load Functie om data in te laden van de "data.html voor button 1"
+            </script>   
 
     
 
@@ -110,7 +152,14 @@
                 </ul>
 
 
-                  
+                <script>
+                    $(document).ready(function(){
+                    $("#button2").click(function(){
+                    $("#eigenschappen").load("data.html #button2");
+                    });
+                    });
+                    // Load Functie om data in te laden van de "data.html voor button 2"
+                    </script>      
 
 
                 <ul id="control1" class="items">
@@ -125,7 +174,14 @@
                     
                     </ul>
 
-                  
+                    <script>
+                        $(document).ready(function(){
+                        $("#button3").click(function(){
+                        $("#eigenschappen").load("data.html #button3");
+                        });
+                        });
+                        // Load Functie om data in te laden van de "data.html voor button 3"
+                        </script>
 
 
                     <ul id="control1" class="items">
@@ -139,7 +195,15 @@
                             </li>
                         
                         </ul>
- 
+
+                        <script>
+                            $(document).ready(function(){
+                            $("#button4").click(function(){
+                            $("#eigenschappen").load("data.html #button4");
+                            });
+                            });
+                            // Load Functie om data in te laden van de "data.html voor button 4"
+                            </script>     
 
         </div>       
     
@@ -193,6 +257,16 @@
     <div id="eigenschappen">
 
     </div> 
+
+    
+
+<script>
+$(document).ready(function(){
+  $("#reset").click(function(){
+    $("#canvas").empty();
+  });
+});
+</script>
 
 
 </body>
