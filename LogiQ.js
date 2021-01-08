@@ -10,12 +10,6 @@ $(function () {
 });
 
 
-    $(document).ready(function(){
-        $("#button2").click(function(){
-        $("#eigenschappen").load("data.html #button2");
-        });
-        });
-        // Load Functie om data in te laden van de "data.html voor button 2"
 
         $(document).ready(function(){
             $("#button3").click(function(){
@@ -30,6 +24,7 @@ $(function () {
                 });
                 });
                 // Load Functie om data in te laden van de "data.html voor button 4"
+            
 
 
          $(document).ready(function(){
@@ -38,18 +33,27 @@ $(function () {
                     });
                   });    
  
-                  
-                  function EigenschappenFunc() {
-                    var person = prompt("Please enter your name", person);
-                    localStorage.setItem("Eigenschap", person);
-                    }
 
-                    function EigenschappenInladen() {
-                        var x = localStorage.getItem("Eigenschap");
-                        document.getElementById("eigenschappen").innerHTML = x;
-                      }
-                   
 
-                       
-                  
+
+                      function EigenschappenFunc() {
+                        var person = document.getElementById('fname').value;
+                        var jok = document.getElementById('lname').value;
+                        localStorage.setItem("Test", person);
+                        localStorage.setItem("Test 1", jok);
+                        }
+
+                        function EigenschappenInladen() {
+                            var a = localStorage.getItem("Test");
+                            var b = localStorage.getItem("Test 1");
+    
+                            document.getElementById("eigenschappen").innerHTML = a + " " + b;
+                          }
+                    
+
+                     
+
+                      
+                      
+                      
                   

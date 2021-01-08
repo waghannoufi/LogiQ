@@ -6,9 +6,12 @@
     <script src="libraries/jquery.js"></script>
     <script src="libraries/jquery-ui.js"></script>
     <script src="LogiQ.js"></script>
+    <link rel="stylesheet" href="modal.css">
+    
 
 
     <style type="text/css">
+
         .bar {
             width: 100px;
             height: 20px;
@@ -71,10 +74,12 @@
             overflow: auto;
             border:2px solid black;
          }
+
          .topnav {
   background-color: #333;
   overflow: hidden;
 }
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -91,6 +96,8 @@
   background-color: #ddd;
   color: black;
 }
+
+
         </style>
      
 </head>
@@ -107,8 +114,8 @@
         <ul id="control1" class="items">
             <li class="">
                 <p class="list availablelist" contenteditable="true">Label 
-                    <button onclick="EigenschappenFunc()">Wijzigen Control</button>
-                    <button onclick="EigenschappenInladen()">Eigenschappen</button>
+                    <button >Wijzigen Control</button>
+                    <button >Eigenschappen</button>
                 </p>
           
               
@@ -123,8 +130,10 @@
             <ul id="control1" class="items">
                 <ul id="control1" class="items">
                     <li class="">
-                        <p class="list availablelist" contenteditable="true">Control 2 
-                            <button id="button2" type="button">Eigenschappen</button>
+                        <p class="list availablelist" contenteditable="true">Control 2
+                            <button class="trigger">Wijzigen Control</button>
+                            <button onclick="EigenschappenInladen()">Eigenschappen</button> 
+                            
                         </p>
                   
                       
@@ -203,6 +212,8 @@
             </ul>
         </div>
 
+
+        
  
 
   
@@ -212,8 +223,46 @@
 
     </div> 
 
-    
+<div class="modal">
+    <div class="modal-content">
+        <span class="close-button">×</span>
+        <h1>Wijzigen Eigenschappen!</h1>
+        <div class="container">
+            <form role="form">
+             <div class="form-group">
+                 <input type="text" name="fname" id="fname" placeholder="First name" required>
+             </div>
+             <div class="form-group">
+                <input type="text" name="lname" id="lname" placeholder="Last name" required>
+            </div>     
+             <div class="form-group">
+                <button onclick="EigenschappenFunc()" type="submit">Confirm</button>
+            </div>   
+            </form>
+          </div>
+    </div>
+</div>
 
+
+<script>
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+</script>
 
 </body>
 </html>
