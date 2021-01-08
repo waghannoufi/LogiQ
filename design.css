@@ -20,11 +20,6 @@
     text-align: center;
 }
 
-.items .ui-selected {
-    background: red;
-    color: white;
-    font-weight: bold;
-}
 
 .items {
     list-style-type: none;
@@ -46,14 +41,16 @@
 
 #canvas
  {
-     width: 85%;
+     width: 75%;
      height:500px;
-     float:center;
+     float:left;
 
      background-image:url(images/grid.jpg);
      text-align: center;
      overflow: scroll;
      border: 5px solid grey;
+     text-emphasis-color: white;
+
  }
  .controlboard
  {
@@ -76,12 +73,12 @@
 }
 
 #eigenschappen {
+    overflow: scroll;
     border:5px solid grey;
+    height: 500px;
     background-color: lightgrey;
-    overflow: hidden;
-    height: 50px;
-    width: 95.5%;
-    font-size: 30px;
+    width: 13.001%;
+    float: right;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align:center
+
 }
