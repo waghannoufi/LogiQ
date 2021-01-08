@@ -1,0 +1,87 @@
+.bar {
+    width: 100px;
+    height: 20px;
+    margin: 2px;
+    border: 1px solid black;
+    background-color: lightgreen;
+    text-align: center;
+    float: left;
+    margin: 2px;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.list:hover{
+    background-color: lightskyblue;
+}
+.list {
+    background-color: lightsteelblue;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.items .ui-selected {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+}
+
+.items li {
+    margin: 2px;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.weekday {
+    float: left;
+}
+
+#canvas
+ {
+     width: 85%;
+     height:500px;
+     float:center;
+
+     background-image:url(images/grid.jpg);
+     text-align: center;
+     overflow: scroll;
+     border: 5px solid grey;
+ }
+ .controlboard
+ {
+    overflow: auto;
+    border:5px solid grey;
+    height: 500px;
+    background-color: lightgrey;
+    width: 10%;
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+ }
+
+ .topnav {
+    border:5px solid grey;
+    height: 250px;
+    background-color: lightgrey;
+    overflow: hidden;
+    height: 50px;
+}
+
+#eigenschappen {
+    border:5px solid grey;
+    background-color: lightgrey;
+    overflow: hidden;
+    height: 50px;
+    width: 95.5%;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center
+}
