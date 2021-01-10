@@ -20,11 +20,6 @@
     text-align: center;
 }
 
-.items .ui-selected {
-    background: red;
-    color: white;
-    font-weight: bold;
-}
 
 .items {
     list-style-type: none;
@@ -46,14 +41,16 @@
 
 #canvas
  {
-     width: 85%;
+     width: 75%;
      height:500px;
-     float:center;
+     float:left;
 
      background-image:url(images/grid.jpg);
      text-align: center;
      overflow: scroll;
      border: 5px solid grey;
+     text-emphasis-color: white;
+
  }
  .controlboard
  {
@@ -64,6 +61,7 @@
     width: 10%;
     float: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 
  }
 
@@ -76,12 +74,26 @@
 }
 
 #eigenschappen {
+    overflow: scroll;
     border:5px solid grey;
+    height: 500px;
     background-color: lightgrey;
-    overflow: hidden;
-    height: 50px;
-    width: 95.5%;
-    font-size: 30px;
+    width: 13.001%;
+    float: right;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align:center
+    text-align: center;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+
+
 }
