@@ -7,7 +7,7 @@
     <script src="libraries/jquery-ui.js"></script>
     <script src="LogiQ.js"></script>
     <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
     <link href='design.css' rel='stylesheet' type='text/css'>  
 
     
@@ -21,7 +21,7 @@
 
 <body>
 
-
+<!-- ------------------------------------------------------------------- -->
 
 <div class=controlboard>
     <ul id="control1" class="items">
@@ -37,7 +37,7 @@
         
         </ul>
 
-    
+    <!-- ------------------------------------------------------------------- -->
     
 
         
@@ -45,7 +45,8 @@
                 <ul id="control1" class="items">
                     <li class="">
                         <p class="list availablelist" contenteditable="true">Control 2
-                            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Wijzigen</button>
+                            <br>
+                            <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
                             <button onclick="EigenschappenInladen()">Eigenschappen</button> 
                             
                         </p>
@@ -55,7 +56,7 @@
                 
                 </ul>
 
-
+<!-- ------------------------------------------------------------------- -->
 
                 <ul id="control1" class="items">
                     <ul id="control1" class="items">
@@ -69,7 +70,7 @@
                     
                     </ul>
 
-
+<!-- ------------------------------------------------------------------- -->
                     <ul id="control1" class="items">
                         <ul id="control1" class="items">
                             <li class="">
@@ -85,65 +86,95 @@
         </div>       
     
     </div>
+<!-- ------------------------------------------------------------------- -->
+
+    <!-- Canvas: Hierin worden de controls in geplaats, doormiddel van ul List tag krijgt ieder control een fixed positie in de canvas -->
     <div id="canvas">
         <div class="weekday">
             <ul class="items">
                 <li></li>
 
-                <li></li>
+               
                 
                
             </ul>
         </div>
-        <div class="weekday">
-            <ul class="items">
-                <li></li>
-    
-                <li></li>
+  <!-- ------------------------------------------------------------------- -->      
 
-                
-               
-            </ul>
-        </div>
-        <div class="weekday">
-            <ul class="items">
-                <li></li>
-
-                <li></li>
-                
-               
-            </ul>
-        </div>
-        <div class="weekday">
-            <ul class="items">
-                <li> </li>
-
-                <li></li>
-                
-               
-            </ul>
-        </div>
-
-
-        
- 
-
-  
     </div>
+    <div id="canvas">
+        <div class="weekday">
+            <ul class="items">
+                <li></li>
+
+              
+                
+               
+            </ul>
+        </div>
+    </div>
+
+ <!-- ------------------------------------------------------------------- -->   
+    <div id="canvas">
+        <div class="weekday">
+            <ul class="items">
+                <li></li>
+
+              
+                
+               
+            </ul>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->   
+    <div id="canvas">
+        <div class="weekday">
+            <ul class="items">
+                <li></li>
+
+                
+               
+            </ul>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->   
+    <div id="canvas">
+        <div class="weekday">
+            <ul class="items">
+                <li></li>
+
+              
+                
+               
+            </ul>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->   
+    <div id="canvas">
+        <div class="weekday">
+            <ul class="items">
+                <li></li>
+
+            
+                
+               
+            </ul>
+        </div>
+    </div>
+<!-- ------------------------------------------------------------------- -->
 <div class="propertiesboard">
     <p>Properties</p>
     <div id="eigenschappen">
 
     </div> 
 </div>
+<!-- ------------------------------------------------------------------- -->
 
-
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <form role="form">
+<div id="id01" class="formprop">
+    <div class="w3-modal-content">
+      <header class="forminput"> 
+        
+        <form role="form" class="forminput2">
             <div class="form-group">
                 <input type="text" name="fname" id="fname" placeholder="Eigenschap 1" required>
             </div>
@@ -151,13 +182,14 @@
                <input type="text" name="lname" id="lname" placeholder="Eigenschap 2" required>
            </div>     
             <div class="form-group">
-               <button onclick="EigenschappenFunc()" type="submit">Confirm</button>
+               <button onclick="EigenschappenFunc()" type="submit"class="buttonconfirm">Confirm</button> <button onclick="document.getElementById('id01').style.display='none'" 
+               class="buttoncancel ">Cancel</span>
            </div>   
            </form>
     </div>
   </div>
 </div>
-
+<!-- ------------------------------------------------------------------- -->
 <script>
     // Get the modal
     var modal = document.getElementById('id01');
