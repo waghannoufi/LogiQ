@@ -33,6 +33,7 @@
     padding: 2px;
     cursor: pointer;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .weekday {
@@ -73,7 +74,7 @@
     height: 50px;
 }
 
-#eigenschappen {
+.propertiesboard {
     overflow: scroll;
     border:5px solid grey;
     height: 500px;
@@ -84,16 +85,3 @@
     text-align: center;
 }
 
-.clock {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
-    font-size: 60px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-   
-
-
-}
