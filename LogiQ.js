@@ -1,15 +1,32 @@
+var sPositions = localStorage.positions || "{}",
+    positions = JSON.parse(sPositions);
+$.each(positions, function (id, pos) {
+    $("#" + id).css(pos)
+})
+
 $(function () {
   $("#canvas .items").sortable({
           connectWith: "ul",
+
           
 
   });
 
   $("ul[id^='control']").draggable({
       helper: "clone",
-      connectToSortable: ".items"
+      connectToSortable: ".items",
+      stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+    }
+
   });
 });
+
+function SaveJson(){
+  var strjson = document.getElementById("canvas").innerHTML;
+  console.log(strjson);
+}
 
 
 
