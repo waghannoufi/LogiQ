@@ -38,3 +38,6 @@ function EigenschappenFunc() {
 
                           document.getElementById("eigenschappen").innerHTML = propertyload.eigenschap1 + "  "+ propertyload.eigenschap2;
                         }
+
+                        var d = new Date();
+document.getElementById("demo").innerHTML = d;
