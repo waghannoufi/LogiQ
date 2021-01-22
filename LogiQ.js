@@ -50,7 +50,6 @@ let SaveJson = () => {
 
 
 
-
        $(document).ready(function(){
                   $("#reset").click(function(){
                     $("#canvas").empty();
