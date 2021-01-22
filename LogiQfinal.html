@@ -25,11 +25,8 @@ document.getElementById("demo").innerHTML = d;
 </script>
 <div class="topnav">
     <button id="reset">Reset</button>
-    <button id="save" onclick="SaveJson()">Save</button>
-    <button id="load" onclick="LoadJson()">Load</button>
+    <input type="button" id="bt" value="Save data to file" onclick="SaveJson()" />
   </div>
-
-
   
 <body>
 
@@ -39,7 +36,7 @@ document.getElementById("demo").innerHTML = d;
     <ul id="control1" class="items">
         <ul id="control1" class="items">
             <li class="">
-                <p  class="list availablelist" contenteditable="true">Label
+                <p  class="list availablelist" contenteditable="true">Control 2
                     <br>
                     <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
                     <button onclick="EigenschappenInladen()">Eigenschappen</button> 
@@ -55,20 +52,54 @@ document.getElementById("demo").innerHTML = d;
     
         
         
-            <div onclick="EigenschappenInladen()" id="control1" class="items">
+            <ul id="control1" class="items">
                 <ul id="control1" class="items">
                     <li class="">
-                        <p  id="eigenschap55" class="list availablelist" contenteditable="true">Text
+                        <p  id="eigenschap55" class="list availablelist" contenteditable="true">Control 2
                             <br>
-                           
+                            <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
+                            <button onclick="EigenschappenInladen()">Eigenschappen</button> 
                             
                         </p>
                   
                       
                     </li>
                 
-                </div>
+                </ul>
+        
+
 <!-- ------------------------------------------------------------------- -->
+
+<ul id="control1" class="items">
+    <ul id="control1" class="items">
+        <li class="">
+            <p  class="list availablelist" contenteditable="true">Control 2
+                <br>
+                <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
+                <button onclick="EigenschappenInladen()">Eigenschappen</button> 
+                
+            </p>
+      
+          
+        </li>
+    
+    </ul>
+
+<!-- ------------------------------------------------------------------- -->
+<ul id="control1" class="items">
+    <ul id="control1" class="items">
+        <li class="">
+            <p  class="list availablelist" contenteditable="true">Control 2
+                <br>
+                <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
+                <button onclick="EigenschappenInladen()">Eigenschappen</button> 
+                
+            </p>
+      
+          
+        </li>
+    
+    </ul>
 
         </div>       
     
@@ -80,15 +111,21 @@ document.getElementById("demo").innerHTML = d;
         <div class="weekday">
             <ul class="items">
                 <li><ul id="control1" class="items">
-                    
+                    <ul id="control1" class="items">
                         <li class="">
-                            
+                            <p class="list availablelist" contenteditable="true">Label 
+                                <button >Wijzigen Control</button>
+                                <button >Eigenschappen</button>
+                            </p>
                       
                           
                         </li>
                     
-                    </ul>
-                </li>
+                    </ul></li>
+
+               
+                
+               
             </ul>
         </div>
   <!-- ------------------------------------------------------------------- -->      
