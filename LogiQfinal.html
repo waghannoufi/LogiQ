@@ -26,6 +26,8 @@ document.getElementById("demo").innerHTML = d;
 <div class="topnav">
     <button id="reset">Reset</button>
     <input type="button" id="bt" value="Save data to file" onclick="SaveJson()" />
+    <input type="file" id="files" name="files[]" multiple />
+
   </div>
   
 <body>
@@ -33,76 +35,34 @@ document.getElementById("demo").innerHTML = d;
 <!-- ------------------------------------------------------------------- -->
 
 <div class=controlboard>
-    <ul id="control1" class="items">
+    <div id="control1" class="items">
         <ul id="control1" class="items">
             <li class="">
-                <p  class="list availablelist" contenteditable="true">Control 2
+                <p  class="list availablelist" contenteditable="true">Label
                     <br>
                     <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
                     <button onclick="EigenschappenInladen()">Eigenschappen</button> 
                     
                 </p>
-          
-              
-            </li>
-        
-        </ul>
+            </li>       
+        </div>
 
     <!-- ------------------------------------------------------------------- -->
     
         
         
-            <ul id="control1" class="items">
+            <div id="control1" class="items">
                 <ul id="control1" class="items">
                     <li class="">
-                        <p  id="eigenschap55" class="list availablelist" contenteditable="true">Control 2
+                        <p  id="eigenschap55" class="list availablelist" contenteditable="true">Text
                             <br>
                             <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
                             <button onclick="EigenschappenInladen()">Eigenschappen</button> 
                             
-                        </p>
-                  
-                      
-                    </li>
-                
-                </ul>
-        
-
-<!-- ------------------------------------------------------------------- -->
-
-<ul id="control1" class="items">
-    <ul id="control1" class="items">
-        <li class="">
-            <p  class="list availablelist" contenteditable="true">Control 2
-                <br>
-                <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
-                <button onclick="EigenschappenInladen()">Eigenschappen</button> 
-                
-            </p>
-      
-          
-        </li>
-    
-    </ul>
-
-<!-- ------------------------------------------------------------------- -->
-<ul id="control1" class="items">
-    <ul id="control1" class="items">
-        <li class="">
-            <p  class="list availablelist" contenteditable="true">Control 2
-                <br>
-                <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
-                <button onclick="EigenschappenInladen()">Eigenschappen</button> 
-                
-            </p>
-      
-          
-        </li>
-    
-    </ul>
-
-        </div>       
-    
+                        </p>                
+                    </li>               
+                </div>
+        </div>         
     </div>
 <!-- ------------------------------------------------------------------- -->
 
@@ -110,29 +70,30 @@ document.getElementById("demo").innerHTML = d;
     <div id="canvas">
         <div class="weekday">
             <ul class="items">
-                <li><ul id="control1" class="items">
-                    <ul id="control1" class="items">
-                        <li class="">
-                            <p class="list availablelist" contenteditable="true">Label 
-                                <button >Wijzigen Control</button>
-                                <button >Eigenschappen</button>
-                            </p>
-                      
-                          
-                        </li>
-                    
-                    </ul></li>
+                <li> <ul></ul></li>
+             </ul>
+            
+            
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
 
-               
-                
+                <li></li>
                
             </ul>
         </div>
-  <!-- ------------------------------------------------------------------- -->      
 
     </div>
+
+    </div>
+
+      <!-- ------------------------------------------------------------------- -->      
+
 <div class="propertiesboard">
     <p>Properties</p>
+
+
     <div id="eigenschappen">
 
     </div> 
@@ -173,6 +134,42 @@ document.getElementById("demo").innerHTML = d;
       }
     }
     </script>
+
+
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
+
+<input type="file" id="file-input" />
+<button id="read-button">Read File</button>
+<pre id="file-contents"></pre>
+
+<script>
+	document.querySelector("#read-button").addEventListener('click', function() {
+		let file = document.querySelector("#file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+	    		document.querySelector("#file-contents").textContent = text;
+		});
+		reader.readAsText(file);
+	});
+</script>
 
 </body>
 </html>

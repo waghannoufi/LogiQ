@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script> 
+    <link href="libraries/jquery-ui.css" rel="stylesheet"></head>
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/jquery-ui.js"></script>
+    <script src="LogiQ.JS"></script>
+
+
+    <style type="text/css">
+        .bar {
+            width: 100px;
+            height: 20px;
+            margin: 2px;
+            border: 1px solid black;
+            background-color: lightgreen;
+            text-align: center;
+            float: left;
+            margin: 2px;
+            padding: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+         
+        .list {
+            background-color: lightblue;
+            border: 1px solid gray;
+        }
+         
+        .items .ui-selected {
+            background: red;
+            color: white;
+            font-weight: bold;
+        }
+         
+        .items {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 150px;
+        }
+         
+        .items li {
+            margin: 2px;
+            padding: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+         
+        .weekday {
+            float: left;
+        }
+         
+        #canvas
+         {
+             widows: 100%;
+             height:250px;
+             border:2px solid black;
+             float:center;
+             margin-top: 50px;
+            background-image:url(images/grid.jpg);
+             text-align: center;
+             overflow: scroll;
+         }
+         .controlboard
+         {
+            overflow: auto;
+            border:2px solid black;
+         }
+ 
+        
+        </style>
+     
+</head>
+
+
+<body>
+
+    <script>
+        $(function () {
+            $("#canvas .items").sortable({
+                    connectWith: "ul"  
+            });
+             
+            $("ul[id^='control']").draggable({
+                helper: "clone",
+                connectToSortable: ".items"
+            });
+        });
+    </script>
+
+
+<div class=controlboard>
+    <ul id="control1" class="items">
+        <ul id="control1" class="items">
+            <li class="">
+                <p class="list availablelist" contenteditable="true">Control 1 
+                    <button id="button1" type="button">Eigenschappen</button>
+                </p>
+          
+              
+            </li>
+        
+        </ul>
+
+        <script>
+            $(document).ready(function(){
+            $("#button1").click(function(){
+            $("#eigenschappen").load("data.html #button1");
+            });
+            });
+            // Load Functie om data in te laden van de "data.html voor button 1"
+            </script>   
+
+    
+
+        
+            <ul id="control1" class="items">
+                <ul id="control1" class="items">
+                    <li class="">
+                        <p class="list availablelist" contenteditable="true">Control 2 
+                            <button id="button2" type="button">Eigenschappen</button>
+                        </p>
+                  
+                      
+                    </li>
+                
+                </ul>
+
+
+                <script>
+                    $(document).ready(function(){
+                    $("#button2").click(function(){
+                    $("#eigenschappen").load("data.html #button2");
+                    });
+                    });
+                    // Load Functie om data in te laden van de "data.html voor button 2"
+                    </script>      
+
+
+                <ul id="control1" class="items">
+                    <ul id="control1" class="items">
+                        <li class="">
+                            <p class="list availablelist" contenteditable="true">Control 3 
+                                <button id="button3" type="button">Eigenschappen</button>
+                            </p>
+                      
+                          
+                        </li>
+                    
+                    </ul>
+
+                    <script>
+                        $(document).ready(function(){
+                        $("#button3").click(function(){
+                        $("#eigenschappen").load("data.html #button3");
+                        });
+                        });
+                        // Load Functie om data in te laden van de "data.html voor button 3"
+                        </script>
+
+
+                    <ul id="control1" class="items">
+                        <ul id="control1" class="items">
+                            <li class="">
+                                <p class="list availablelist" contenteditable="true">Control 4 
+                                    <button id="button4" type="button">Eigenschappen</button>
+                                </p>
+                          
+                              
+                            </li>
+                        
+                        </ul>
+
+                        <script>
+                            $(document).ready(function(){
+                            $("#button4").click(function(){
+                            $("#eigenschappen").load("data.html #button4");
+                            });
+                            });
+                            // Load Functie om data in te laden van de "data.html voor button 4"
+                            </script>     
+
+        </div>       
+    
+    </div>
+
+    <div style="clear:both"></div>
+    <div>Canvas</div>
+    <div id="canvas">
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+        <div class="weekday">
+            <ul class="items">
+                <li> </li>
+
+                <li></li>
+                
+               
+            </ul>
+        </div>
+
+ 
+
+  
+    </div>
+
+    <div id="eigenschappen">
+
+    </div> 
+
+    <button id="reset">Reset</button>
+
+<script>
+$(document).ready(function(){
+  $("#reset").click(function(){
+    $("#canvas").empty();
+  });
+});
+</script>
+
+
+</body>
+</html>
