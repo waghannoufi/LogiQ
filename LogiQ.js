@@ -1,8 +1,3 @@
-var sPositions = localStorage.positions || "{}",
-    positions = JSON.parse(sPositions);
-$.each(positions, function (id, pos) {
-    $("#" + id).css(pos)
-})
 
 $(function () {
   $("#canvas .items").sortable({
@@ -11,16 +6,16 @@ $(function () {
           
   });
 
-  $("ul[id^='control']").draggable({
+  $("#controlboard .controls").draggable({
       helper: "clone",
       connectToSortable: ".items",
-      stop: function (event, ui) {
-        positions[this.id] = ui.position
-        localStorage.positions = JSON.stringify(positions)
-    }
+      
 
   });
+
 });
+
+
 
 let SaveJson = () => {
     	 
@@ -31,7 +26,7 @@ let SaveJson = () => {
   
   // Convert the text to BLOB.
   const textToBLOB = new Blob([data], { type: 'text/plain' });
-  const sFileName = 'formData.txt';	   // The file to save the data.
+  const sFileName = 'SaveProces.txt';	   // The file to save the data.
 
   let newLink = document.createElement("a");
   newLink.download = sFileName;
@@ -48,6 +43,45 @@ let SaveJson = () => {
   newLink.click(); 
 }
 
+function LoadFile(){
+  document.getElementById('upload').addEventListener('change', readFileAsString)
+  function readFileAsString() {
+      var files = this.files;
+      if (files.length === 0) {
+          alert('No file is selected');
+          return;
+      }
+  
+      var reader = new FileReader();
+      reader.onload = function(event) {
+          document.getElementById("canvas").innerHTML = event.target.result;
+      };
+      reader.readAsText(files[0]);
+
+
+
+
+
+
+
+  }
+  
+}
+
+function Properties(){
+
+  var property = {
+    naam : document.getElementById('naam').value,
+    value : document.getElementById('valuecontrol').value,
+    tekst : document.getElementById('tekst').value,
+  };
+
+  var node = document.createElement("P");
+  var textnode = document.createTextNode(property.naam);            
+  node.appendChild(textnode);                              
+  document.getElementById("prop").appendChild(node); 
+
+}
 
 
        $(document).ready(function(){

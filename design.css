@@ -54,7 +54,7 @@
      font-size: 25px;
 
  }
- .controlboard
+ #controlboard
  {
     overflow: auto;
     border:5px solid grey;

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML> 
+<html> 
+  
+<head> 
+    <title> 
+        Change the ID of the element 
+        using pure JavaScript 
+    </title> 
+  
+    <style> 
+        .div { 
+            height: 100px; 
+            width: 200px; 
+            margin: 0 auto; 
+            color: white; 
+        } 
+  
+        #div1 { 
+            background: green; 
+        } 
+  
+        #div2 { 
+            background: blue; 
+        } 
+    </style> 
+</head> 
+  
+<body style="text-align:center;"> 
+  
+    <h1 style="color:green;"> 
+        GeeksForGeeks 
+    </h1> 
+  
+    <p id="GFG_UP"></p> 
+  
+    <div class="div" id="div1"></div> 
+    <br> 
+  
+    <button onclick="document.getElementById( 
+        'div1').id = 'div2'; return false"> 
+        click here 
+    </button> 
+  
+    <script> 
+        var el_up =  
+            document.getElementById('GFG_UP'); 
+  
+        el_up.innerHTML = "Click on button to" 
+                    + " change the ID of box."; 
+    </script> 
+</body> 
+  
+</html> 

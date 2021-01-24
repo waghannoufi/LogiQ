@@ -25,71 +25,42 @@ document.getElementById("demo").innerHTML = d;
 </script>
 <div class="topnav">
     <button id="reset">Reset</button>
-<<<<<<< HEAD
-
     <input type="button" id="bt" value="Save" onclick="SaveJson()" />
-
-
+    <input type="file" id="upload" value="Load" onclick="LoadFile()" />
     
 
-=======
-    <input type="button" id="bt" value="Save data to file" onclick="SaveJson()" />
-    <input type="file" id="files" name="files[]" multiple />
->>>>>>> e976f56af0c614809fa26bf65d5b5c9e93902310
-
   </div>
-  
 <body>
 
 <!-- ------------------------------------------------------------------- -->
 
-<div class=controlboard>
-    <div id="control1" class="items">
-        <ul id="control1" class="items">
-            <li class="">
-                <p  class="list availablelist" contenteditable="true">Label
+<div id=controlboard>
+    <div id="control" class="controls">
+                <p  class="list availablelist">
                     <br>
-                    <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
-                    <button onclick="EigenschappenInladen()">Eigenschappen</button> 
+                    <input type="image" src="images/edit icon.png" height="50" width="50" onclick="document.getElementById('id01').style.display='block'"/>
+                <div id="prop">
                     
-                </p>
-            </li>       
-        </div>
+                </div>
+                </p>   
+    </div>
 
     <!-- ------------------------------------------------------------------- -->
-    
-        
-        
-            <div id="control1" class="items">
-                <ul id="control1" class="items">
-                    <li class="">
-                        <p  id="eigenschap55" class="list availablelist" contenteditable="true">Text
-                            <br>
-                            <button onclick="document.getElementById('id01').style.display='block'" >Wijzigen</button>
-                            <button onclick="EigenschappenInladen()">Eigenschappen</button> 
-                            
-                        </p>                
-                    </li>               
-                </div>
-        </div>         
-    </div>
+</div>         
 <!-- ------------------------------------------------------------------- -->
 
     <!-- Canvas: Hierin worden de controls in geplaats, doormiddel van ul List tag krijgt ieder control een fixed positie in de canvas -->
     <div id="canvas">
-        <div class="weekday">
+        <div class="lijst">
             <ul class="items">
-                <li> <ul></ul></li>
+                <li></li>
              </ul>
             
             
         </div>
-        <div class="weekday">
+        <div class="lijst">
             <ul class="items">
                 <li> </li>
-
-                <li></li>
-               
             </ul>
         </div>
 
@@ -118,14 +89,14 @@ document.getElementById("demo").innerHTML = d;
                 <input type="text" name="naam" id="naam" placeholder="Naam Control" required>
             </div>
             <div class="form-group">
-                <input type="text" name="fname" id="fname" placeholder="Eigenschap 1" required>
+                <input type="text" name="valuecontrol" id="valuecontrol" placeholder="Value" required>
             </div>
             <div class="form-group">
-               <input type="text" name="lname" id="lname" placeholder="Eigenschap 2" required>
+               <input type="text" name="tekst" id="tekst" placeholder="Tekst" required>
            </div>     
             <div class="form-group">
-               <button onclick="EigenschappenFunc()" class="buttonconfirm">Confirm</button> <button onclick="document.getElementById('id01').style.display='none'" 
-               class="buttoncancel ">Cancel</button>
+               <button onclick="Properties()" class="buttonconfirm">Confirm</button>
+               <button onclick="document.getElementById('id01').style.display='none'" class="buttoncancel ">Cancel</button>
            </div>   
         </div>
     </div>
@@ -146,39 +117,6 @@ document.getElementById("demo").innerHTML = d;
 
 
 
-<script>
-  function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // files is a FileList of File objects. List some properties.
-    var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-                  '</li>');
-    }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>
-
-<input type="file" id="file-input" />
-<button id="read-button">Read File</button>
-<pre id="file-contents"></pre>
-
-<script>
-	document.querySelector("#read-button").addEventListener('click', function() {
-		let file = document.querySelector("#file-input").files[0];
-		let reader = new FileReader();
-		reader.addEventListener('load', function(e) {
-	    		let text = e.target.result;
-	    		document.querySelector("#file-contents").textContent = text;
-		});
-		reader.readAsText(file);
-	});
-</script>
 
 </body>
 </html>
