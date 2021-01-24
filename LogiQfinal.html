@@ -23,10 +23,12 @@
 var d = new Date();
 document.getElementById("demo").innerHTML = d;
 </script>
+
 <div class="topnav">
-    <button id="reset">Reset</button>
     <input type="button" id="bt" value="Save" onclick="SaveJson()" />
     <input type="file" id="upload" value="Load" onclick="LoadFile()" />
+    <img id="trash" src="images/trash.png" alt="Delete" width="50" height="50">
+    
     
 
   </div>
@@ -87,12 +89,15 @@ document.getElementById("demo").innerHTML = d;
 
 <div class="propertiesboard">
     <p>Properties</p>
+    <img id="trash" src="images/trash.png" alt="Delete" width="50" height="50">
 
 
     <div id="eigenschappen">
 
     </div> 
+    
 </div>
+
 <!-- ------------------------------------------------------------------- -->
 
 <div id="id01" class="formprop">
