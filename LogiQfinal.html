@@ -35,17 +35,32 @@ document.getElementById("demo").innerHTML = d;
 <!-- ------------------------------------------------------------------- -->
 
 <div id=controlboard>
-    <div id="control" class="controls">
-                <p  class="list availablelist">
-                    <br>
-                    <input type="image" src="images/edit icon.png" height="50" width="50" onclick="document.getElementById('id01').style.display='block'"/>
-                <div id="prop">
-                    
-                </div>
-                </p>   
-    </div>
+   
 
-    <!-- ------------------------------------------------------------------- -->
+    <div id="control" class="controls">
+      
+      
+        
+        <ul id="control1" class="items">
+            <ul id="control1" class="items">
+                <li class="">
+                    
+                    <p class="list availablelist"   contenteditable="true">Label 
+                        <input type="image" src="images/edit.png"  width="20"  onclick="document.getElementById('id01').style.display='block'"/>
+                        <ul hidden="true" id="proplist"><li>Naam</li><li>Value</li><li>Tekst</li></ul>
+
+                    </p>
+              
+                  
+                </li>
+            
+            </ul>
+            
+    
+</div>
+
+
+
 </div>         
 <!-- ------------------------------------------------------------------- -->
 
@@ -114,6 +129,9 @@ document.getElementById("demo").innerHTML = d;
       }
     }
     </script>
+
+
+
 
 </body>
 </html>

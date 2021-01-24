@@ -69,18 +69,36 @@ function LoadFile(){
 }
 
 function Properties(){
-
   var property = {
     naam : document.getElementById('naam').value,
     value : document.getElementById('valuecontrol').value,
     tekst : document.getElementById('tekst').value,
   };
 
-  var node = document.createElement("P");
-  var textnode = document.createTextNode(property.naam);            
-  node.appendChild(textnode);                              
-  document.getElementById("prop").appendChild(node); 
+  const proplist = document.getElementById("proplist");
 
+
+  const valuelist = proplist.children[1];
+  const newvaluelist = document.createElement("Li");
+  newvaluelist.textContent = property.value;
+  proplist.replaceChild(newvaluelist, valuelist);
+
+
+  const naamlist = proplist.children[0];
+  const newnamelist = document.createElement("Li");
+  newnamelist.textContent = property.naam;
+  proplist.replaceChild(newnamelist, naamlist)
+
+  const tekstlist = proplist.children[2];
+  const newtekstlist = document.createElement("Li");
+  newtekstlist.textContent = property.tekst;
+  proplist.replaceChild(newtekstlist, tekstlist);
+
+
+  var firstDivContent = document.getElementById('proplist');
+      var secondDivContent = document.getElementById('eigenschappen');
+      secondDivContent.innerHTML = firstDivContent.innerHTML;
+    
 }
 
 
@@ -90,25 +108,6 @@ function Properties(){
                   });
                 });
 
-
-
-
-function EigenschappenFunc() {
-                      var property = {
-                        naam : document.getElementById('naam').value,
-                        eigenschap1 : document.getElementById('fname').value,
-                        eigenschap2 : document.getElementById('lname').value,
-                        
-
-                      };
-                      localStorage.setItem(property.naam, JSON.stringify(property));
-                      }
-
-                      function EigenschappenInladen() {
-                          var propertyload = JSON.parse(localStorage.getItem(property.naam));
-
-                          document.getElementById("eigenschappen").innerHTML = propertyload.eigenschap1 + "  "+ propertyload.eigenschap2;
-                        }
 
                         var d = new Date();
 document.getElementById("demo").innerHTML = d;

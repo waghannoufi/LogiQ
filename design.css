@@ -15,9 +15,15 @@
     background-color: lightskyblue;
 }
 .list {
-    border: 5px solid rgba(28,110,164,0.5);
-    border-radius: 0px 40px 0px 40px;
-    background-color: white;
+    padding-top: 10px;
+    width: 110%;
+    background-color: lightgray;
+    border: 5px solid transparent;
+    border-color: darkgrey;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+
 }
 
 
@@ -25,7 +31,10 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: lightgray;
+    
     width: 150px;
+    
 }
 
 .items li {
@@ -33,6 +42,8 @@
     padding: 2px;
     cursor: pointer;
     border-radius: 3px;
+
+
    
 }
 
@@ -51,7 +62,6 @@
      overflow: scroll;
      border: 5px solid grey;
      text-emphasis-color: white;
-     font-size: 25px;
 
  }
  #controlboard
@@ -59,31 +69,34 @@
     overflow: auto;
     border:5px solid grey;
     height: 500px;
-    background-color: lightgrey;
+    background-color: #F0ECEC;
     width: 10%;
     float: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    border-radius: 0px 0px 0px 15px;
 
  }
 
  .topnav {
     border:5px solid grey;
     height: 250px;
-    background-color: lightgrey;
+    background-color: #F0ECEC;
     overflow: hidden;
     height: 50px;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .propertiesboard {
     overflow: scroll;
     border:5px solid grey;
     height: 500px;
-    background-color: lightgrey;
+    background-color: #F0ECEC;
     width: 13.001%;
     float: right;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    border-radius: 0px 0px 15px 0px;
 }
 
 
@@ -150,4 +163,9 @@
     border: none;
     background: #f1f1f1;
     cursor: pointer;
+}
+
+#editbutton{
+    background-image:url(images/edit.png);
+    background-size: 20px;
 }
